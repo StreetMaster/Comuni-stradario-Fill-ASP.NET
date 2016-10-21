@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://fillWS.streetmaster/" targetNamespace="http://fillWS.streetmaster/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Fill" type="tns:Fill" />
+  <xs:element name="FillResponse" type="tns:FillResponse" />
+  <xs:complexType name="Fill">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="inFill" type="tns:inputCommon" />
+      <xs:element minOccurs="0" name="key" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="inputCommon">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cap" type="xs:string" />
+      <xs:element minOccurs="0" name="civico" type="xs:string" />
+      <xs:element minOccurs="0" name="dug" type="xs:string" />
+      <xs:element minOccurs="0" name="indirizzo" type="xs:string" />
+      <xs:element minOccurs="0" name="localita" type="xs:string" />
+      <xs:element minOccurs="0" name="localita2" type="xs:string" />
+      <xs:element minOccurs="0" name="provincia" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FillResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TotOutFill" type="tns:totOutFill" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="totOutFill">
+    <xs:sequence>
+      <xs:element name="codErr" type="xs:int" />
+      <xs:element name="norm" type="xs:int" />
+      <xs:element name="numCand" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="outItem" nillable="true" type="tns:outFill" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="outFill">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="alter" type="tns:infoAlter" />
+      <xs:element minOccurs="0" name="cap" type="xs:string" />
+      <xs:element minOccurs="0" name="civico" type="tns:infoCivico" />
+      <xs:element minOccurs="0" name="comune" type="xs:string" />
+      <xs:element minOccurs="0" name="detail" type="tns:infoDetail" />
+      <xs:element minOccurs="0" name="frazione" type="xs:string" />
+      <xs:element minOccurs="0" name="geo" type="tns:infoGeo" />
+      <xs:element minOccurs="0" name="indirizzo" type="xs:string" />
+      <xs:element minOccurs="0" name="postale" type="tns:infoPostale" />
+      <xs:element minOccurs="0" name="provincia" type="xs:string" />
+      <xs:element name="scoreComune" type="xs:int" />
+      <xs:element name="scoreStrada" type="xs:int" />
+      <xs:element minOccurs="0" name="shortFormat" type="tns:infoShort" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="infoAlter">
+    <xs:sequence>
+      <xs:element name="cap" type="xs:int" />
+      <xs:element name="comune" type="xs:int" />
+      <xs:element name="dug" type="xs:int" />
+      <xs:element name="frazione" type="xs:int" />
+      <xs:element name="provincia" type="xs:int" />
+      <xs:element name="via" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="infoCivico">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="casellaPostale" type="xs:string" />
+      <xs:element minOccurs="0" name="civAdd" type="xs:string" />
+      <xs:element minOccurs="0" name="civShort" type="xs:string" />
+      <xs:element minOccurs="0" name="colore" type="xs:string" />
+      <xs:element minOccurs="0" name="esponente" type="xs:string" />
+      <xs:element name="km" type="xs:double" />
+      <xs:element name="numCivico" type="xs:int" />
+      <xs:element minOccurs="0" name="presso" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="infoDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="belfiore" type="xs:string" />
+      <xs:element minOccurs="0" name="CAB" type="xs:string" />
+      <xs:element minOccurs="0" name="catasto" type="xs:string" />
+      <xs:element minOccurs="0" name="civico" type="xs:string" />
+      <xs:element name="codComune" type="xs:int" />
+      <xs:element name="codStrada" type="xs:int" />
+      <xs:element minOccurs="0" name="comuneMultiCap" type="xs:string" />
+      <xs:element minOccurs="0" name="dug" type="xs:string" />
+      <xs:element minOccurs="0" name="istatComune" type="xs:string" />
+      <xs:element minOccurs="0" name="istatProv" type="xs:string" />
+      <xs:element minOccurs="0" name="istatRegione" type="xs:string" />
+      <xs:element minOccurs="0" name="provEstesa" type="xs:string" />
+      <xs:element minOccurs="0" name="regione" type="xs:string" />
+      <xs:element minOccurs="0" name="stradaMultiCap" type="xs:string" />
+      <xs:element minOccurs="0" name="toponimo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="infoGeo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="omi" type="xs:string" />
+      <xs:element minOccurs="0" name="sez1991" type="xs:string" />
+      <xs:element minOccurs="0" name="sez2001" type="xs:string" />
+      <xs:element minOccurs="0" name="sez2011" type="xs:string" />
+      <xs:element minOccurs="0" name="side" type="xs:string" />
+      <xs:element name="warning" type="xs:int" />
+      <xs:element name="x" type="xs:double" />
+      <xs:element name="x1" type="xs:double" />
+      <xs:element name="y" type="xs:double" />
+      <xs:element name="y1" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="infoPostale">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="comune" type="xs:string" />
+      <xs:element minOccurs="0" name="comuneShort" type="xs:string" />
+      <xs:element minOccurs="0" name="dug" type="xs:string" />
+      <xs:element minOccurs="0" name="dugCompl" type="xs:string" />
+      <xs:element minOccurs="0" name="frazione" type="xs:string" />
+      <xs:element minOccurs="0" name="frazioneShort" type="xs:string" />
+      <xs:element minOccurs="0" name="isFrazionePT" type="xs:string" />
+      <xs:element minOccurs="0" name="isStradaPT" type="xs:string" />
+      <xs:element minOccurs="0" name="rigaAggiuntiva" type="xs:string" />
+      <xs:element minOccurs="0" name="rigaEdificio" type="xs:string" />
+      <xs:element minOccurs="0" name="rigaIndirizzo" type="xs:string" />
+      <xs:element minOccurs="0" name="rigaLocalita" type="xs:string" />
+      <xs:element minOccurs="0" name="toponimo" type="xs:string" />
+      <xs:element minOccurs="0" name="toponimoShort" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="infoShort">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="comune" type="xs:string" />
+      <xs:element minOccurs="0" name="dug" type="xs:string" />
+      <xs:element minOccurs="0" name="frazione" type="xs:string" />
+      <xs:element minOccurs="0" name="indirizzo" type="xs:string" />
+      <xs:element minOccurs="0" name="toponimo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
