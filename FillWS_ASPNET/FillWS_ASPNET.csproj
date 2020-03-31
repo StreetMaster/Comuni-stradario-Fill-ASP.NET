@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -107,10 +108,10 @@
     <None Include="Web References\FillWS\fill.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Web References\FillWS\Reference.map">
+    <None Include="Web References\FillWS\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </Content>
+    </None>
     <Content Include="Web References\FillWS\totOutFill.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </Content>

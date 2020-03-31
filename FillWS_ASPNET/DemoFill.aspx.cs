@@ -6,7 +6,7 @@ namespace FillWS_ASPNET
     /// Esempio di utilizzo del servizio WS FILL per la verifica e la normalizzazione degli indirizzi italiani 
     /// 
     /// L'end point del servizio è 
-    ///     http://ec2-46-137-97-173.eu-west-1.compute.amazonaws.com/smws/fill?wsdl
+    ///     https://streetmaster.streetmaster.it/smws/fill?wsdl
     ///     
     /// Per l'utilizzo registrarsi sul sito http://streetmaster.it e richiedere la chiave per il servizio FILL 
     /// 

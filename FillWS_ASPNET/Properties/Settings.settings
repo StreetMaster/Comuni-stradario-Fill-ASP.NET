@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="FillWS_ASPNET_FillWS_fill" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://ec2-46-137-97-173.eu-west-1.compute.amazonaws.com:80/smws/fill</Value>
+      <Value Profile="(Default)">https://streetmaster.streetmaster.it/smws/fill</Value>
     </Setting>
   </Settings>
 </SettingsFile>

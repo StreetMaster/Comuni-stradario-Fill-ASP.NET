@@ -12,7 +12,7 @@ namespace FillWS_ASPNET.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.4.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,7 +26,7 @@ namespace FillWS_ASPNET.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://ec2-46-137-97-173.eu-west-1.compute.amazonaws.com:80/smws/fill")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://streetmaster.streetmaster.it/smws/fill")]
         public string FillWS_ASPNET_FillWS_fill {
             get {
                 return ((string)(this["FillWS_ASPNET_FillWS_fill"]));
