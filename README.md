@@ -9,7 +9,7 @@ Comuni italiani e stradario, soluzione ASP.NET per l'utilizzo del ws soap FILL d
 
 ### Endpoint
 ```
-     http://ec2-46-137-97-173.eu-west-1.compute.amazonaws.com/smws/fill?wsdl
+     https://streetmaster.streetmaster.it/smws/fill?wsdl
 ```
 
 ### Key
